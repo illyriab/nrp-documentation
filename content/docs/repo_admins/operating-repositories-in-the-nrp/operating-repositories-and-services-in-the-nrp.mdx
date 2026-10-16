@@ -1,0 +1,68 @@
+---
+title: Operating Repositories and Services in the NRP
+---
+
+This documentation covers use cases of running repositories and related
+services in the National Repository Platform (NRP).
+
+In general, the reader should be familiar with [current conditions for
+creating repositories in the NRP](conditions-for-creating-repositories) that describe the process from organisational view.
+
+Note that you are not expected to handle establishing a repository
+yourself, you should always [contact repository system specialists](https://www.eosc.cz/en/services/data-storage/repositories-in-nrp/creating-repositories-in-the-nrp) first.
+
+In this document, we describe a more technical level, we discuss procedures
+and models of dividing responsibilities in operation of services in the
+NRP. The basic division is whether you intend to use core repository
+systems (i.e. CESNET-Invenio, CLARIN-DSpace, ASEP/ARL) or a specific
+implementation of a repository or of a related service (we told you that
+you need to read the conditions linked above first!). In addition to that,
+there are subtleties depending on the level of customisation your user
+group requests for your repository even in case of core repository systems.
+
+## Generic NRP Architecture
+
+To discuss its usage at this level, it is necessary to understand the basic architecture of the NRP.
+
+The lowest layer of the infrastructure consists of hardware clusters. The
+clusters are operated by the NRP staff and support two major enabling
+technologies for the whole enterprise: S3 storage and Kubernetes clusters.
+
+In a nutshell, repositories and services run in Kubernetes and store data
+into a “virtually reliable” S3. If you are interested in principles how
+this level of reliability is achieved, check the [detailed
+description of NRP storage and containers](nrp-storage-and-containers).
+
+## Involved Personnel, Roles, and Responsibilities
+
+The storage and containers of the NRP are operated by the infrastructure
+personnel, directly reachable through [L3 and storage support channels](../user_support/user_support).
+
+The repository itself is managed by the _repository administrator_ (you
+have read the conditions linked on the top, haven't you? And note that the repo
+admin is a role and responsibility, not a single person!). Who
+exactly operates the technical part of the repository depends on many
+details. We provide a generic overview. Keep in mind that the details of the setup always need
+to be carefully negotiated for individual cases.
+
+### Running Repositories Based on Core Implementations
+
+If you intend to run an instance of a [core repository
+implementation](../repository-implementations) supported by the NRP, the
+infrastructure supports various levels of customisation of the repositories
+that directly translate to division of responsibilities between the
+NRP infrastructure and the repository administrator. Continue
+to the [documentation on running standard repository
+implementations](running-repositories) in the NRP for further details.
+
+### Running Specific Applications and/or Other Repository Implementations
+
+For running services and repository implementations that are not directly
+supported by the NRP, the infrastructure offers the S3-based storage and environment
+to run containers. The repository (or service) administrator must ensure the
+technical operation of the repository itself (including sufficient
+personnel to prepare the deployment and to guarantee a reasonable quality of service throughout the whole life cycle).
+
+To establish a service in this mode, kindly refer to [documentation on
+running services in the NRP](running_applications).
+

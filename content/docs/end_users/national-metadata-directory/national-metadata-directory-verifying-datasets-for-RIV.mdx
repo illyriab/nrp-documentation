@@ -9,16 +9,21 @@ For datasets already indexed in the NMD, you can find the “link to the NMD for
 in the listing of each metadata record, such as here:
 ![riv-link-in-record-metadata.png](/img/nrp/national-metadata-directory/riv-link-in-record-metadata.png)
 
+Kindly note that **the “link for RIV” should never be used as a persistent
+identifier anywhere else except in RIV**, such as in citations or long-term
+identification of the record. Anyway, you will need both identifiers for
+creating of a RIV record.
 
 ## Verifying Datasets for RIV
 
 Note that a dataset must have a persistent identifier to be acceptable as
 “result of type T” by RIV. It is usually DOI or Handle (but other types are
-also acceptable).
+also acceptable). The persistent identifier should be used in citations,
+publication references, and other long-term identification of the record.
 
 Browse to the National Metadata Directory at https://nma.eosc.cz.
 
-Select “Verify dataset for RIV”. You will be asked to log in (refer to
+Select “Obtain the link for RIV”. You will be asked to log in (refer to
 [description how to register and log in if you need
 help](national-metadata-directory-access)).
 
@@ -36,7 +41,8 @@ described above.
 ### 2. Metadata of the Dataset Could be Harvested
 
 If the NMD doesn't know the dataset yet, it will attempt to retrieve and
-download its metadata. If that succeeds, the NMD will announce it
+download its metadata. If that succeeds, resulting in a valid metadata
+record, the NMD will announce it
 registered a dataset. Again, its metadata will show the link for RIV.
 
 Note that the NMD does its best to retrieve the metadata from DataCite
@@ -44,14 +50,15 @@ and/or the primary repository.
 
 ### 3. Metadata of the Dataset Could Not be Harvested
 
-If the NMD could not retrieve the dataset's metadata, you will receive a
-warning stating **We detected some metadata issues within the record. To obtain a URL for RIV reporting, please check and correct the metadata below.**. In that case, fill in the requested basic metadata
+If the NMD could not retrieve dataset's metadata (or it retrieved only a
+part of it), you will receive a
+warning stating **We detected some metadata issues within the record. To obtain a URL for RIV reporting, please check and correct the metadata below.** In that case, fill in the requested basic metadata
 manually. For authors/creators, use the “Add creator” button. Don't forget
 to save the record when you are finished.
 
 ## Correcting Recent Records
 
-You can edit recently ingested records, should any corrections be
+You can edit records you created recently, should any corrections be
 necessary. Editing is available for **7 days** after the record is created.
 For reference, you will also receive an email with direct link to the
 record you created, but you can open the edit form simply by the same
@@ -61,6 +68,9 @@ need to be logged in to edit the record.
 If corrections are necessary even after the editing period, kindly [contact
 support](national-metadata-directory-support) and identify the record to be
 corrected. They will reset the editing timer for your record.
+
+Note that a record cannot be deleted (as somebody else may rely on its
+existence in the NMD once it's been created).
 
 ## General Comments
 
